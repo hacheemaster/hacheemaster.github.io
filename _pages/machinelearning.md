@@ -1,8 +1,10 @@
 ---
-layout: home
+layout: archive
+permalink: /machine-learning/
+title: "Machine Learning Posts by Tags"
 author_profile: true
-header: 
-  image: "/images/bay bridge cover1.jpg"
+header:
+  image: "/images/bike sausalito.jpg"
 ---
 
 {% include base_path %}
