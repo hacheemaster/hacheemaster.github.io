@@ -42,4 +42,4 @@ Python code block:
 '''
 
 Here's an image:
-
+<img src="{{ site.url }}{{ site.baseurl }}/images/activityrecognition/activity recognition.jpg" alt="activity recognition">
