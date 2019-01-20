@@ -107,7 +107,7 @@ analytics:
 # Site Author
 author:
   name             : "Hasan Cheema"
-  avatar           : "hacheemaster.github.io/images/bio-photo.jpg"
+  avatar           : "https://hacheemaster.github.io/images/bio-photo.jpg"
   bio              : "Data Science Portfolio"
   location         : "San Francisco, CA"
   email            :
