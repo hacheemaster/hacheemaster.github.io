@@ -7,5 +7,3 @@ header:
   image: "/assets/images/cover3.jpg"
 ---
 
-{% include base_path %}
-
