@@ -1,5 +1,5 @@
 ---
-title: "Kaggle: Liberty Mutual Group Property Inspection Challenge"
+title: "Liberty Mutual Group: Property Inspection Challenge (Kaggle)"
 date: 2019-01-22
 tags: [kaggle, random forest, xgboost]
 header:
