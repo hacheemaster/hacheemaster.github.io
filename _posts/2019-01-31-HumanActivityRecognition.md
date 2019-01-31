@@ -2,8 +2,8 @@
 title: "Human Activity Recognition using RNNs"
 date: 2019-01-31
 tags: [RNN, neural network, activity recognition]
-header:
-  image: "/assets/images/activityrecognition.jpg"
+#header:
+#  image: "/assets/images/activityrecognition.jpg"
 excerpt: "RNN, Human Activity Recognition, Neural Network"
 ---
 
