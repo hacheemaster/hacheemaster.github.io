@@ -7,7 +7,7 @@ header:
 excerpt: "Kaggle, Insurance, Data Science"
 ---
 
-**Result**: Top 12% (226/2,362 competitors)	
+**Result**: Top 12% (248/2,362 competitors)	
 
 **End Date**: August 28, 2015
 
