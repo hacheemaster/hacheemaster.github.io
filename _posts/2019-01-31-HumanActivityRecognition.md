@@ -19,6 +19,6 @@ excerpt: "RNN, Human Activity Recognition, Neural Network"
 3. CONV-LSTM
 
 **Key Insights**:
-* Need to repeat the experiment multiple times in order to get a stable estimate of a particular neural network architecture's accuracy due to their stochastic nature
+* Due to the stochastic nature of neural networks, we need to repeat the experiment multiple times in order to get a stable estimate of a particular architecture's accuracy.
 * 
 
