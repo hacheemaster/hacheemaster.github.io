@@ -3,7 +3,7 @@ title: "Liberty Mutual Group: Property Inspection Challenge (Kaggle)"
 date: 2019-01-22
 tags: [kaggle, random forest, xgboost]
 header:
-  image: "/assets/images/propertyinspection.png"
+  image: "/assets/images/propertyinspection.jpg"
 excerpt: "Kaggle, Insurance, Data Science"
 ---
 
