@@ -1,11 +1,13 @@
 ---
 title: "Human Activity Recognition using RNNs"
 date: 2019-01-31
-tags: [RNN, neural network, activity recognition]
+tags: [RNN, smartphones, activity recognition]
 #header:
 #  image: "/assets/images/activityrecognition.jpg"
-excerpt: "RNN, Human Activity Recognition, Neural Network"
+excerpt: "RNN, Human Activity Recognition, Smartphones"
 ---
+
+***
 
 # Summary 
 
@@ -21,4 +23,6 @@ excerpt: "RNN, Human Activity Recognition, Neural Network"
 **Key Insights**:
 * Due to the stochastic nature of neural networks, we need to repeat the experiment multiple times in order to get a stable estimate of a particular architecture's accuracy.
 * 
+
+***
 
