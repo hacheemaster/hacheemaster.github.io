@@ -19,21 +19,19 @@ excerpt: "Deep Learning, Human Action Recognition, Smartphones"
 * Due to the stochastic nature of neural networks, repeat the experiment multiple times in order to get a stable estimate of a particular architecture's accuracy.
 * 1D CNNs are faster to train and test. Hence, they would serve better in production
 
-# Problem Statement: Human Action Recognition Using Smartphone Data
+# Problem Statement
 
 Human Action Recogntion aims to determine human activities given monitoring data from systems such as body sensors or videos. The process usually involves noise filtering the data and extracting pre-defined time series features. The problem with this approach is it requires domain expertise.
 
-An alternative approach would be to use neural network architectures that can serve as feature extractors, thus eliminating the need for feature engineering. In this tutorial, you will learn LSTMs and how they  
+An alternative approach would be to use neural network architectures that can serve as feature extractors, thus eliminating the need for feature engineering. In this tutorial, you will learn LSTMs and how they stack up against more recent 1-D CNNs.
 
-It has multiple applications from research into fall risk patients to surveillance systems.
+Human Action Recognition has multiple applications from research into fall risk patients to surveillance systems. The main goal of this post is to classify six human actions (walking, walking upstairs, walking downstairs, sitting, standing, laying) based on time series data provided by a smartphone. 
 
-
-
-The main goal of this post is to analyze monitoring data provided by a smartphone.
-
-# Data: Smartphone Dataset
+# Data
 
 The data we'll be wrangling with today is the ['Human Activity Recognition Using Smartphones Data Set'](https://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip) made freely available on the UCI Machine Learning Repository.
+
+
 
 
 
