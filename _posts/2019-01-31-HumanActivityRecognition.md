@@ -7,22 +7,18 @@ tags: [Deep Learning, smartphones, action recognition]
 excerpt: "Deep Learning, Human Action Recognition, Smartphones"
 ---
 
-***
-
 # Summary 
 
 1. **Problem Statement**: Use accelerometer data from a smartphone to classify human actions into six classes (walking, walking upstairs, walking downstairs, sitting, standing, laying).
-2. **Data**: We will be using the Human Activity Recognition smartphone dataset: [UCI HAR Dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip)
+2. **Data**: Human Activity Recognition smartphone dataset: [UCI HAR Dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip)
 3. **Approaches**: 
 * LSTM
 * CNN-LSTM
 * CONV-LSTM
 
 4. **Key Insights**:
-* Due to the stochastic nature of neural networks, we need to repeat the experiment multiple times in order to get a stable estimate of a particular architecture's accuracy.
+* Due to the stochastic nature of neural networks, repeat the experiment multiple times in order to get a stable estimate of a particular architecture's accuracy.
 * 
-
-***
 
 ## Problem Statement: Human Action Recognition Using Smartphone Data
 
