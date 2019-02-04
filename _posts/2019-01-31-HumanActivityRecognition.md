@@ -29,10 +29,13 @@ Human Action Recognition has multiple applications from research into fall risk 
 
 # Data
 
-The data we'll be wrangling with today is the ['Human Activity Recognition Using Smartphones Data Set'](https://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip) made freely available on the UCI Machine Learning Repository.
+We will be wrangling with the ['Human Activity Recognition Using Smartphones Data Set'](https://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip) freely available in the UCI Machine Learning Repository.
 
+The experiment was carried out by 30 participants. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, the authors captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
-
+The sensor signals were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). From each window, a vector of features was obtained (jerk, magnitude, etc.). However, we won't rely on this 561-feature vector that requires domain expertise to create. Instead, we'll let our neural network calculate the necessary features from the 6 original inertial signals:
+* 3-axial signals for total acceleration (x,y,z)
+* 3-axial signals for angular velocity (x,y,z)
 
 
 
