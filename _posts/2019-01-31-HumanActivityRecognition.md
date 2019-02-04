@@ -38,5 +38,7 @@ The sensor signals were pre-processed by applying noise filters and then sampled
 
 Every row in the final dataset contains a 128 element vector with 6 signals. Therefore, each row contains 128*6, or 768 elements. The dataset has been randomly partitioned into two sets, where 70% of the volunteers were selected for generating the training data and 30% the test data. 
 
+# Methods
+
 # Results & Insights
 
