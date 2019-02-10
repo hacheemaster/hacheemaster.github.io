@@ -44,7 +44,7 @@ Every row in the final dataset contains a 128 element vector with 6 signals. The
 
 Long Short-Term Memory (LSTM) networks are a type of recurrent neural network that can learn patterns over sequences. The main advantage of LSTMs over traditional machine learning techniques is that they require no feature engineering.
 
-'''python
+```python
 def custom_lstm(lstm_units):
     input_smartphone = Input(shape=(X_train.shape[1],X_train.shape[2]), name='input_smartphone')
 	
@@ -55,7 +55,7 @@ def custom_lstm(lstm_units):
 
     model = Model(inputs=input_smartphone,outputs=output) 
     return model
-'''
+```
 
 ## 1D-CNN
 
