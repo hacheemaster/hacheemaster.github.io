@@ -44,6 +44,8 @@ Every row in the final dataset contains a 128 element vector with 6 signals. The
 
 Long Short-Term Memory (LSTM) networks are a type of recurrent neural network that can learn patterns over sequences. The main advantage of LSTMs over traditional machine learning techniques is that they require no feature engineering.
 
+The custom_lstm() function below defines a stack of two LSTMs to process the input smart phone data. 
+
 ```python
 def custom_lstm(lstm_units):
     input_smartphone = Input(shape=(X_train.shape[1],X_train.shape[2]), name='input_smartphone')
@@ -59,6 +61,25 @@ def custom_lstm(lstm_units):
 
 ## 1D-CNN
 
+We can also use Convolutional Neural Networks (CNNs) to process the temporal data. There have been recent successes with such architectures in the domain of Natural Language Processing.
+
+The custom_1d_cnn() function below defines a typical 1-dimensional CNN architecture with Max Pooling, Global Average Pooling, and Dropout intertwined to reduce overfitting.
+
+```python
+def custom_1d_cnn(conv_units):
+    input_smartphone = Input(shape=(X_train.shape[1], X_train.shape[2] ), name='input_smartphone')
+        
+    x = Conv1D(conv_units, kernel_size=3, activation='relu')(input_smartphone)
+    x = MaxPool1D(pool_size=2)(x)
+    x = Conv1D(conv_units, kernel_size=3, activation='relu')(x)
+    x = GlobalAveragePooling1D()(x)
+    x = Dropout(0.5)(x)
+    
+    output = Dense(nb_classes, activation='softmax', name='output')(x)
+
+    model = Model(inputs=input_smartphone,outputs=output) 
+    return model
+```
 
 
 # Results & Insights
