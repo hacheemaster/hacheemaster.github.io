@@ -7,7 +7,7 @@ tags: [Deep Learning, smartphones, action recognition]
 excerpt: "Deep Learning, Human Action Recognition, Smartphones"
 ---
 
-# Summary 
+# Agenda 
 
 1. **Problem Statement**: Use smartphone data to classify six human actions (walking, walking upstairs, walking downstairs, sitting, standing, laying).
 2. **Data**: Human Activity Recognition smartphone dataset: [UCI HAR Dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip)
@@ -15,8 +15,7 @@ excerpt: "Deep Learning, Human Action Recognition, Smartphones"
 * LSTM
 * 1D CNN
 4. **Results & Insights**:
-* Due to the stochastic nature of neural networks, repeat the experiment multiple times in order to get a stable estimate of a particular architecture's accuracy.
-* 1D CNNs are faster to train and test. They would serve better in production.
+* 1D CNNs are faster to train and test. They will serve better in production.
 
 # Problem Statement
 
@@ -86,11 +85,16 @@ def custom_1d_cnn(conv_units):
 
 # Results & Insights
 
-From the table below we can see that the LSTM and CNN models are comparable in size. Both sit roughly around 1.5 MB. However, the LSTM model takes 4X longer to run! Moreover, it seems that the LSTM model is slightly overfitting the training data as shown by the drop in accuracy when moving from training to validating/testing. Both models take a slight hit in terms of accuracy when trying to predict the test set, but a slight drop is to be expected.
+From the table below we can see that the LSTM and CNN models are comparable in size. Both sit roughly around 1.5 MB. However, the LSTM model takes 4X longer to run! Moreover, it seems that the LSTM model is slightly overfitting the training data as shown by the drop in accuracy when moving from training to validating. Both models take a slight hit in terms of accuracy when trying to predict the test set, but a slight drop for unseen data is to be expected.
 
 Model | Size (MB) | Runtime (X_train, 10 reps) | Accuracy (X_train) | Accuracy (X_val) | Accuracy (X_test) 
 --- | --- | --- | --- | --- | ---
 LSTM | 1.5 | 20.4s +/- 1s | 96% | 92% | 86%
 CNN | 1.8 | 5.2s +/- .8s | 92% | 90% | 86% 
 
-Full code: https://github.com/hacheemaster/HumanActivityRecognition/blob/master/HAR_LSTMS.ipynb
+# Summary
+
+In conclusion, when trying to perform human activity recognition using smart phone data, it's better to use one-dimensional Convolutional Neural Networks over LSTMs due to the slow runtime for LSTMs. 
+
+
+**Full code**: https://github.com/hacheemaster/HumanActivityRecognition/blob/master/HAR_LSTMS.ipynb
