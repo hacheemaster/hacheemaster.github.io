@@ -88,9 +88,9 @@ def custom_1d_cnn(conv_units):
 
 From the table below we can see that the LSTM and CNN models are comparable in size. Both sit roughly around 1.5 MB. However, the LSTM model takes 4X longer to run! Moreover, it seems that the LSTM model is slightly overfitting the training data as shown by the drop in accuracy when moving from training to validating/testing. Both models take a slight hit in terms of accuracy when trying to predict the test set, but a slight drop is to be expected.
 
-Model | Size (MB) | Runtime on X_train (10 reps) | Accuracy (X_train,X_val,X_test) 
---- | --- | --- | ---
-LSTM | 1.5 | 20.4s +/- 1s | 96%, 92%, 86%
-CNN | 1.8 | 5.2s +/- .8s | 92%, 90%, 86% 
+Model | Size (MB) | Runtime (X_train, 10 reps) | Accuracy (X_train) | Accuracy (X_val) | Accuracy (X_test) 
+--- | --- | --- | --- | --- | ---
+LSTM | 1.5 | 20.4s +/- 1s | 96% | 92% | 86%
+CNN | 1.8 | 5.2s +/- .8s | 92% | 90% | 86% 
 
 Full code: https://github.com/hacheemaster/HumanActivityRecognition/blob/master/HAR_LSTMS.ipynb
