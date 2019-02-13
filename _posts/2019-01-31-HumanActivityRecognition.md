@@ -94,7 +94,7 @@ CNN | 1.8 | 5.2s +/- .8s | 92% | 90% | 86%
 
 # Summary
 
-In conclusion, when trying to perform human activity recognition using smart phone data, it's better to use one-dimensional Convolutional Neural Networks over LSTMs due to the slow runtime for LSTMs. 
+In conclusion, when trying to perform human activity recognition using smart phone data, it's better to use one-dimensional Convolutional Neural Networks over LSTMs due to the longer runtime for LSTMs. 
 
 
 **Full code**: [github](https://github.com/hacheemaster/HumanActivityRecognition/blob/master/HAR_LSTMS.ipynb)
