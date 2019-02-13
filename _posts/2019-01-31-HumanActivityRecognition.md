@@ -2,8 +2,8 @@
 title: "Human Action Recognition using Deep Learning"
 date: 2019-01-31
 tags: [Deep Learning, smartphones, action recognition]
-#header:
-#  image: "/assets/images/activityrecognition.jpg"
+header:
+  image: "/assets/images/activityrecognition.gif"
 excerpt: "Deep Learning, Human Action Recognition, Smartphones"
 ---
 
