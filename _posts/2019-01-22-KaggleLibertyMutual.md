@@ -1,5 +1,5 @@
 ---
-title: "Liberty Mutual Group: Property Inspection Challenge (Kaggle)"
+title: "Liberty Mutual's Hazard Count Prediction for Properties (Kaggle)"
 date: 2019-01-22
 tags: [kaggle, random forest, xgboost]
 header:
