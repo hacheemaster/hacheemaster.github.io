@@ -3,7 +3,7 @@ title: "Churn Prediction for KKBox"
 date: 2019-02-19
 tags: [kaggle, churn, logistic regression]
 header:
-  image: "/assets/images/churn.jpg"
+  image: "/assets/images/churn.jpeg"
 excerpt: "Kaggle, Churn, Logistic Regression"
 ---
 
