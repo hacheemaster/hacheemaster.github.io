@@ -1,5 +1,5 @@
 ---
-title: "Liberty Mutual's Hazard Count Prediction for Properties"
+title: "Hazard Count Prediction for Liberty Mutual's Properties"
 date: 2019-01-22
 tags: [kaggle, random forest, xgboost]
 header:
@@ -7,7 +7,7 @@ header:
 excerpt: "Kaggle, Insurance, Data Science"
 ---
 
-**Result**: Top 12% (248/2,362 competitors)	
+**Kaggle Ranking**: Top 12% (248/2,362 competitors)	
 
 **End Date**: August 28, 2015
 

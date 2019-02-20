@@ -1,5 +1,5 @@
 ---
-title: "Churn Prediction: Music Subscription Service KKBox"
+title: "Churn Prediction for KKBox"
 date: 2019-02-19
 tags: [kaggle, churn, logistic regression]
 header:
