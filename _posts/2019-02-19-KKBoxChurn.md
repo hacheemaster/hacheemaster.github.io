@@ -11,4 +11,4 @@ excerpt: "Kaggle, Churn, Logistic Regression"
 
 **Best Method**: Logistic Regression
 
-**Reflections**: This [competition](https://www.kaggle.com/c/kkbox-churn-prediction-challenge) was particularly challenging because the anonymized features left little room for feature engineering. It was a fun exercise in ensembling and performing proper cross-validation to prevent overfitting on the public leaderboard, as tempting as that may be.
+**Reflections**: This [competition](https://www.kaggle.com/c/kkbox-churn-prediction-challenge) was interesting because along with membership information, we were provided with user listening behavior in the logs. This was a great opportunity to explore feature engineering and really understand what variables drive user behavior.
