@@ -1,5 +1,5 @@
 ---
-title: "Liberty Mutual's Hazard Count Prediction for Properties (Kaggle)"
+title: "Liberty Mutual's Hazard Count Prediction for Properties"
 date: 2019-01-22
 tags: [kaggle, random forest, xgboost]
 header:
