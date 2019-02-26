@@ -56,17 +56,10 @@ SVM's use kernels to project data into a higher dimension to make it linearly se
 
 ## Naive Bayes
 
-
-
+Naive Bayes classifier is a probabilistic classifier that uses Bayes' theorem along with the assumption of independent covariates. It is very fast with a time complexity of O(N). For a new customer - using Bayes rule - we can find P(churn=1|age=a1,...,gender=a28) by calculating P(age=a1,...,gender=a28|churn=1)*P(churn=1)/P(age=a1,...,gender=a28). However, since we assume indepencence of our features, this simplifies to P(age=a1|churn=1)x...xP(gender=a28|churn=1)xP(churn=1)/P(age=a1,...,gender=a28). We can create frequency tables from our training data to calculate the posterior probability using the prior probabilities. If we ever run into the case where a particular attribute value-class combination has a frequency of zero, we can add 1 to the count (**Laplace Smoothing**). 
 
 # Results & Insights
 
-
-* Cleaning the data required digging into 
-* What is the baseline performance based on the most prevelant class?
-* Does a particular city churn more? If so, are there any other variables that might be drivers of the higher churn (age, gender, etc.)?
-* Does a particular gender churn more?
-* Is there a specific bucketed age group that churns more?
-* Does a specific registration lead to more churns? It could be that people that register via similar methods have similar behaviors.
+In summary, we learned that 
 
 Full Code: [Github]()
