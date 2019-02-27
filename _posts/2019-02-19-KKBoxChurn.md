@@ -60,6 +60,11 @@ Naive Bayes classifier is a probabilistic classifier that uses Bayes' theorem al
 
 # Results & Insights
 
-In summary, we learned that 
+In summary, we learned that:
+* Logistic regression coefficients can be used to determine the odds of churning compared to a base class
+* Decision Trees represented an upper bound for the ROC curve for this particular task
+* SVM is slow and is not advised if N is large
+* Naive Bayes has the fastest runtime with reasonable accuracy
+
 
 Full Code: [Github]()
