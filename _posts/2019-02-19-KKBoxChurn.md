@@ -20,6 +20,7 @@ excerpt: "Kaggle, Churn, Logistic Regression"
 4. **Results & Insights**:
 * For each machine learning technique, make sure to check the assumptions and validate them before interpreting any results.
 * Logit transformation is used in logistic regression so we can predict outputs in the range of (-inf,inf) for log odds instead of (0,1) for probabilities.
+* Logistic regression with model monitoring implemented is the best solution for the given data and business use case.
 
 # Problem Statement
 
@@ -72,7 +73,11 @@ We can evaluate each of the classifiers using an ROC curve and computing the Are
 | Decision Tree | 0.73 | 0.72 | O(N x log(N)) |
 | Support Vector Machines | - | - | O(N^2) |
 
-Based on **interpretability** and **accuracy vs. runtime** considerations, it makes the most sense to deploy the logistic regression model into production to periodically predict the likelihood of a customer churning (churn next 30 days, churn next 3 months, churn next 6 months, etc.). We can rank order the customers based on highest probability of churning and use a separate A/B tested marketing promotions model - only targeting those customers with a high probability of churning that will also accept the marketing promotion. That way, depending on the cost of each promotion, we save money and only target the customers most likely to renew their subscription while also enhancing the customer experience by not annoying a larger population of users that might churn now but come back later. Finally, we will have to put some sort of **model monitoring** into effect to check whether the distribution of our scores or input parameters to the logistic model have started deviating too much. This indicates the model might need to be trained on a new dataset as a result of changing customer behaviors. Metrics such as [**Population Stability Index**](https://www.listendata.com/2015/05/population-stability-index.html) can be used to rank order the scores and compare the distribution across deciles to see if has shifted.
+Based on **interpretability** and **accuracy vs. runtime** considerations, it makes the most sense to deploy the logistic regression model into production to periodically predict the likelihood of a customer churning (churn next 30 days, churn next 3 months, churn next 6 months, etc.). We can rank order the customers based on highest probability of churning and use a separate A/B tested marketing promotions model - only targeting those customers with a high probability of churning that will also accept the marketing promotion. That way, depending on the cost of each promotion, we save money and only target the customers most likely to renew their subscription while also enhancing the customer experience by not annoying a larger population of users that might churn now but come back later. 
+
+Finally, we will have to put some sort of **model monitoring** into effect to check whether the distribution of our scores or input parameters to the logistic model have started deviating too much. This indicates the model might need to be trained on a new dataset as a result of changing customer behaviors. Metrics such as [**Population Stability Index**](https://www.listendata.com/2015/05/population-stability-index.html) can be used to rank order the scores and compare the distribution across deciles to see if has shifted.
+
+
 
 
 Full Code: [Github](https://github.com/hacheemaster/KKBox-Churn-Prediction/blob/master/KKBOX%20Churn%20Prediction.ipynb)
