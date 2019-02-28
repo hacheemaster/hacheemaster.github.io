@@ -56,11 +56,11 @@ SVM's use kernels to project data into a higher dimension to make it linearly se
 
 ## Naive Bayes
 
-Naive Bayes classifier is a probabilistic classifier that uses Bayes' theorem along with the assumption of independent covariates. It is very fast with a time complexity of O(N). For a new customer - using Bayes rule - we can find P(churn=1|age=a1,...,gender=a28) by calculating P(age=a1,...,gender=a28|churn=1)*P(churn=1)/P(age=a1,...,gender=a28). However, since we assume indepencence of our features, this simplifies to P(age=a1|churn=1)x...xP(gender=a28|churn=1)xP(churn=1)/P(age=a1,...,gender=a28). We can create frequency tables from our training data to calculate the posterior probability using the prior probabilities. If we ever run into the case where a particular attribute value-class combination has a frequency of zero, we can add 1 to the count (**Laplace Smoothing**). 
+Naive Bayes classifier is a probabilistic classifier that uses Bayes' theorem along with the assumption of independent covariates. It is very fast with a time complexity of O(N). For a new customer - using Bayes rule - we can find P(churn=1/age=a1,...,gender=a28) by calculating P(age=a1,...,gender=a28/churn=1)*P(churn=1)/P(age=a1,...,gender=a28). However, since we assume indepencence of our features, this simplifies to P(age=a1/churn=1)x...xP(gender=a28/churn=1)xP(churn=1)/P(age=a1,...,gender=a28). We can create frequency tables from our training data to calculate the posterior probability using the prior probabilities. If we ever run into the case where a particular attribute value-class combination has a frequency of zero, we can add 1 to the count (**Laplace Smoothing**). 
 
 # Results & Insights
 
-We can evaluate each of the classifiers using and ROC curve and computing the Area Under the Curve (AUC). AUC represents the probability of a classifier ranking a randomly chosen positive observation higher than a randomly chosen negative observation. If the classifier does a perfect job of separating the classes, then this value should be equal to 1.
+We can evaluate each of the classifiers using an ROC curve and computing the Area Under the Curve (AUC). AUC represents the probability of a classifier ranking a randomly chosen positive observation higher than a randomly chosen negative observation. If the classifier does a perfect job of separating the classes, then this value should be equal to 1.
 
 <img src="/assets/images/KKBOX_ROC_testing.png"> 
 
@@ -72,10 +72,7 @@ We can evaluate each of the classifiers using and ROC curve and computing the Ar
 | Decision Tree | 0.73 | 0.72 | O(N x log(N)) |
 | Support Vector Machines | - | - | O(N^2) |
 
-In summary, we learned that:
-* Logistic regression 
-* Logistic regression coefficients can be used to determine the odds of churning compared to a base class
-* SVM is slow and is not advised if N is large
+Based on **interpretability** and **accuracy vs. runtime** considerations, it makes the most sense to deploy the logistic regression model into production to periodically predict the likelihood of a customer churning (churn next 30 days, churn next 3 months, churn next 6 months, etc.). We can rank order the customers based on highest probability of churning and use a separate A/B tested marketing promotions model - only targeting those customers with a high probability of churning that will also accept the marketing promotion. That way, depending on the cost of each promotion, we save money and only target the customers most likely to renew their subscription while also enhancing the customer experience by not annoying a larger population of users that might churn now but come back later. Finally, we will have to put some sort of **model monitoring** into effect to check whether the distribution of our scores or input parameters to the logistic model have started deviating too much. This indicates the model might need to be trained on a new dataset as a result of changing customer behaviors. Metrics such as [**Population Stability Index**](https://www.listendata.com/2015/05/population-stability-index.html) can be used to rank order the scores and compare the distribution across deciles to see if has shifted.
 
 
-Full Code: [Github]()
+Full Code: [Github](https://github.com/hacheemaster/KKBox-Churn-Prediction/blob/master/KKBOX%20Churn%20Prediction.ipynb)
