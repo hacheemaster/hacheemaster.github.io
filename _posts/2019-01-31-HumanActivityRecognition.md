@@ -1,10 +1,10 @@
 ---
-title: "Human Action Recognition using Deep Learning"
+title: "Human Action Recognition in Time Series data using Deep Learning"
 date: 2019-01-31
-tags: [Deep Learning, smartphones, action recognition]
+tags: [Deep Learning, Time Series, action recognition]
 header:
   image: "/assets/images/activityrecognition.gif"
-excerpt: "Deep Learning, Human Action Recognition, Smartphones"
+excerpt: "Deep Learning, Time Series, Human Action Recognition, Smartphones"
 ---
 
 # Agenda 

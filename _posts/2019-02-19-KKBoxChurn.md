@@ -52,7 +52,7 @@ Random forests are an extension of decision trees where we only consider a handf
 
 ## Support Vector Machines (SVM)
 
-SVM's use kernels to project data into a higher dimension to make it linearly separable and maximize the margin between classes using hyperplanes. Since the time complexity of SVM is O(N^2), they are more appropriate for smaller datasets and would not be appropriate for the current dataset.
+SVM's use kernels to project data into a higher dimension to make it linearly separable and maximize the margin between classes using a N-1 dimensional hyperplane. Since the time complexity of SVM is O(N^2), they are more appropriate for smaller datasets and will not be used for the current dataset.
 
 ## Naive Bayes
 
@@ -60,11 +60,22 @@ Naive Bayes classifier is a probabilistic classifier that uses Bayes' theorem al
 
 # Results & Insights
 
+We can evaluate each of the classifiers using and ROC curve and computing the Area Under the Curve (AUC). AUC represents the probability of a classifier ranking a randomly chosen positive observation higher than a randomly chosen negative observation. If the classifier does a perfect job of separating the classes, then this value should be equal to 1.
+
+<img src="/assets/images/KKBOX_ROC_testing.png"> 
+
+| Machine Learning Technique | AUC (TRAIN) | AUC (TESTING)| Runtime Complexity |
+| --- | --- | --- | --- |
+| Naive Bayes | 0.66 | 0.66 | O(N) |
+| Logistic Regression | 0.68 | 0.68 | O(N) |
+| Random Forest | 0.71 | 0.71 | O(N x log(N)) |
+| Decision Tree | 0.73 | 0.72 | O(N x log(N)) |
+| Support Vector Machines | - | - | O(N^2) |
+
 In summary, we learned that:
+* Logistic regression 
 * Logistic regression coefficients can be used to determine the odds of churning compared to a base class
-* Decision Trees represented an upper bound for the ROC curve for this particular task
 * SVM is slow and is not advised if N is large
-* Naive Bayes has the fastest runtime with reasonable accuracy
 
 
 Full Code: [Github]()
