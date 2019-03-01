@@ -80,4 +80,4 @@ Finally, we will have to put some **model monitoring** into effect to check whet
 
 
 
-Full Code: [Github](https://github.com/hacheemaster/KKBox-Churn-Prediction/blob/master/KKBOX%20Churn%20Prediction.ipynb)
+**Full Code**: [Github](https://github.com/hacheemaster/KKBox-Churn-Prediction/blob/master/KKBOX%20Churn%20Prediction.ipynb)

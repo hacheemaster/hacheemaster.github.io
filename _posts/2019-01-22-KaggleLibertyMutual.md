@@ -11,7 +11,7 @@ excerpt: "Kaggle, Insurance, Data Science"
 
 **End Date**: August 28, 2015
 
-**Description**: Predict hazard counts for a house given anonymized variables about the roof, foundation, windows, sliding, etc. The goal is to help Liberty Mutual determine whether they should insure the property. Therefore, aligning Liberty Mutual's portolio of home insurance policies with their business goals. 
+**Description**: Predict hazard counts for a house given anonymized variables such as roof, foundation, windows, and sliding. The goal is to help Liberty Mutual determine whether they should insure the property. Therefore, aligning Liberty Mutual’s portfolio of home insurance policies with their business goals.
 
 **Best Method**: Weighted Ensemble (RF + XGBoost)
 
