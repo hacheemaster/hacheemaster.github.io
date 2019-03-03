@@ -13,7 +13,7 @@ excerpt: "Conversion Funnel, Visualization, Plotly"
 2. **Data**: E-commerce website visitor history: [Dataset](https://www.kaggle.com/aerodinamicc/ecommerce-website-funnel-analysis)
 3. **Exploratory Analysis**: 
 * Sankey Diagram Visualization
-* Bivariate Exploratory Analysis
+* Bivariate Analysis
 4. **Results & Insights**:
 * Conversion rate dropped on March 1st, 2015 from the home page to the search page for Mobile users.
 
@@ -31,20 +31,10 @@ For every page, the respective csv contains a list of user_id's that visited tha
 
 # Exploratory Analysis
 
-<img src="assets/images/conversion_sankey.png" alt="hi" class="inline"/>
+<img src="assets/images/conversion_sankey.png" class="inline"/>
 
 # Results & Insights
 
-From the table below we can see that the LSTM and CNN models are comparable in size. Both sit roughly around 1.5 MB. However, the LSTM model takes 4X longer to run! Moreover, it seems that the LSTM model is slightly overfitting the training data as shown by the drop in accuracy when moving from training to validating. Both models take a slight hit in terms of accuracy when trying to predict the test set, but a slight drop for unseen data is to be expected.
-
-Model | Size (MB) | Runtime (X_train, 10 reps) | Accuracy (X_train) | Accuracy (X_val) | Accuracy (X_test) 
---- | --- | --- | --- | --- | ---
-LSTM | 1.5 | 20.4s +/- 1s | 96% | 92% | 86%
-CNN | 1.8 | 5.2s +/- .8s | 92% | 90% | 86% 
-
-# Summary
-
-In conclusion, when trying to perform human activity recognition using smart phone data, it's better to use one-dimensional Convolutional Neural Networks over LSTMs due to the longer runtime for LSTMs. 
 
 
-**Full code**: [Github](https://github.com/hacheemaster/HumanActivityRecognition/blob/master/HAR_LSTMS.ipynb)
+**Full code**: [Github](https://github.com/hacheemaster/E-commerce_website_conversion_funnel_analysis/blob/master/Conversion%20funnel%20analysis%20for%20e-commerce%20website.ipynb)
