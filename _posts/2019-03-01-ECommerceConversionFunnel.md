@@ -56,6 +56,7 @@ The graph above displays a sharp **75% drop in conversion rate** for both mobile
  
 # Results & Insights
 
-* There is a sharp drop in the number of mobile users landing on the search page from the home page. * We also see a steep drop in conversion rate for all users landing on the payment page from the search page. Further investigation into the update rollout schedule should shed some light. 
+* There is a sharp drop in the number of mobile users landing on the search page from the home page.
+* We also see a steep drop in conversion rate for all users landing on the payment page from the search page. Further investigation into the update rollout schedule should shed some light. 
 
 **Full code**: [Github](https://github.com/hacheemaster/E-commerce_website_conversion_funnel_analysis/blob/master/Conversion%20funnel%20analysis%20for%20e-commerce%20website.ipynb)
