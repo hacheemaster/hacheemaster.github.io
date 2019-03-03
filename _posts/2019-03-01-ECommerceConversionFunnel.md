@@ -33,8 +33,26 @@ For every page, the respective csv contains a list of user_id's that visited tha
 
 <img src="/assets/images/conversion_sankey.png"/>
 
+Observations:
+* Home to Search : 
+    * Conversion Rate: 50% (45,200/90,400)
+    * From the sankey visualization it appears we are doing a good job of converting customers from the home page to the search page. Ways in which we can improve conversion from home to search include **A/B testing** the _headline, Call To Action, logo,_ and _search and navigation bar_.
+* Search to Payment: 
+    * Conversion Rate: 13% (6,030/45,200) 
+    * We can improve our search algorithm by using better NLP methods to provide faster - 1d-CNNs as opposed to RNNs - and more accurate results. 
+    * The auto-fill algorithm can be improved and tested to measure improvement.
+* Payment to Payment_Confirmation: 
+    * Conversion Rate: 7.5% (452/6,030)
+    * We can use a heatmap to see what parts of the screen the user spends the most time on to get better insight on what's detracting the user away from the payment_confirmation page. 
+    * A/B test a variety of pages: a version with no **up-sells** and **cross-sells**, a version with up-selling and cross-selling, and a version showing similar products to the one being purchased. 
+
+<img src="/assets/images/E-commerce conversion funnel Daily visitors by Device.png"/>
+
+On March 1st, there was a very sharp decline in the number of mobile users converting from the home to the search page. We need to further investigate why we **lost 75% of the mobile users**! Perhaps there was an upgrade to the search feature on the website that wasn't mobile friendly?
+
 # Results & Insights
 
+There is a sharp drop in the number of mobile users landing on the search page from the home page. The CEO should check to see what changes in the search bar functionality were put into production around March 1st, 2015 to further shed some light onto the situation.
 
 
 **Full code**: [Github](https://github.com/hacheemaster/E-commerce_website_conversion_funnel_analysis/blob/master/Conversion%20funnel%20analysis%20for%20e-commerce%20website.ipynb)
