@@ -31,7 +31,7 @@ For every page, the respective csv contains a list of user_id's that visited tha
 
 # Exploratory Analysis
 
-<img src="assets/images/conversion_sankey.png" class="inline"/>
+<img src="/assets/images/conversion_sankey.png"/>
 
 # Results & Insights
 
