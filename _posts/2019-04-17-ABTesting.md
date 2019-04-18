@@ -18,7 +18,7 @@ excerpt: "AB Testing, Conversion Rate"
 
 We have data about an A/B test that an e-commerce website conducted. There are two versions of the landing page that they tested. The goal is to help the company understand if they should implement the new page, keep the old page, or perhaps run the experiment longer to make their decision.
 
-$H_0$: $p_{new}$ - $p_{old}$ = 0
+H~0: p~new - p~old = 0
 
 # Data
 
