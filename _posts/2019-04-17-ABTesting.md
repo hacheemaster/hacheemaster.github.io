@@ -9,11 +9,21 @@ excerpt: "AB Testing, Conversion Rate"
 
 # Agenda 
 
-1. **Problem Statement**: Explore the conversion funnel of an e-commerce website to suggest ways of improving the conversion rate.
-2. **Data**: E-commerce website visitor history: [Dataset](https://www.kaggle.com/aerodinamicc/ecommerce-website-funnel-analysis)
-3. **Exploratory Analysis**: 
-* Sankey Diagram Visualization
-* Bivariate Analysis
-4. **Results & Insights**:
-* Conversion rate dropped on March 1st, 2015 from the home page to the search page by 75% for Mobile users.
+1. **Problem Statement**: Analyze A/B testing data from an e-commerce website and help them decide whether they should keep the older version of the landing page, implement the newer one, or run the experiment longer.
+2. **Data**: E-commerce A/B Testing: [Dataset](https://www.kaggle.com/zhangluyuan/ab-testing)
+3. **Results & Insights**:
+* Z-test comparison the proportions of people that converted in each group demonstrated that there wasn't a significant difference between conversion rates.
+
+# Problem Statement
+
+We have data about an A/B test that an e-commerce website conducted. There are two versions of the landing page that they tested. The goal is to help the company understand if they should implement the new page, keep the old page, or perhaps run the experiment longer to make their decision.
+
+$H_0$: $p_{new}$ - $p_{old}$ = 0
+
+# Data
+
+
+
+# Results & Insights
+
 
