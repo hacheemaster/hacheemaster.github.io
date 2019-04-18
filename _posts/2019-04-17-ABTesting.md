@@ -12,14 +12,14 @@ excerpt: "AB Testing, Conversion Rate"
 1. **Problem Statement**: Analyze A/B testing data from an e-commerce website and help them decide whether they should keep the older version of the landing page, implement the newer one, or run the experiment longer.
 2. **Data**: E-commerce A/B Testing: [Dataset](https://www.kaggle.com/zhangluyuan/ab-testing)
 3. **Results & Insights**:
-* Z-test comparison the proportions of people that converted in each group demonstrated that there wasn't a significant difference between conversion rates.
+* A Z-test comparing the proportions of people that converted in each group demonstrated that there wasn't a significant difference between conversion rates.
 
 # Problem Statement
 
 We have data about an A/B test that an e-commerce website conducted. There are two versions of the landing page that they tested. The goal is to help the company understand if they should implement the new page, keep the old page, or perhaps run the experiment longer to make their decision.
 
-Null Hypothesis:  CRnew - CRold = 0
-Alternative Hypothesis: CRnew - CRold > 0
+* Null Hypothesis:  ConversionNew - ConversionOld = 0
+* Alternative Hypothesis: ConversionNew - ConversionOld > 0
 
 Let's set our risk tolerance for the **type I error at .05** (i.e., 5% of the time we say there is an effect when there is none) and the type II error at 0.2, or equivalently the **power at 0.8** (i.e., 80% of the time when there is an effect, we detect it). Finally, let's **detect a minimum effect size of 3.1%**.
 
