@@ -7,9 +7,11 @@ tags: [Deploy, Machine Learning, Docker, REST API]
 excerpt: "Deploy, Docker, REST API"
 ---
 
-We will use the famous iris dataset to build a classifier that we can serve as an API via a Docker container. 
+We will use the famous iris dataset to build a classifier that we can serve as an API via a Docker container. The sklearn pipeline for preprocessing as well as predicting is saved as a joblib file. 
 
-## Train and save a model
+## Train and export prediction pipeline
+
+In order to efficiently retrain the model, we will create a file named __model.py__
 
 ```python
 from sklearn.externals import joblib
@@ -31,6 +33,46 @@ pipeline.fit(iris.data, iris.target)
 
 # Export the classifier to a file
 joblib.dump(pipeline, 'model.joblib')
+```
+## Deploy the model with Docker and Flask
+
+In order to run Docker containers, you need the Docker daemon installed. Once it's installed, we need a directory with the following files:
+1. Dockerfile
+2. __init__.py
+3. app.py
+4. requirements.txt
+5. model.joblib
+
+## Setup the Dockerfile
+
+To build our Docker container, we need to provide a __Dockerfile__. 
+
+```python
+FROM python:3.5.3
+ 
+WORKDIR /app/
+ 
+COPY requirements.txt /app/
+RUN pip install -r ./requirements.txt
+ 
+COPY app.py __init__.py /app/
+COPY model.joblib /app/
+ 
+EXPOSE 5000
+ 
+ENTRYPOINT python ./app.py
+```
+
+After installing the necessary dependencies for python, the file installs everything from the __requirements.txt__ file.
+
+```python
+Flask==1.0.2
+scikit_learn==0.20.1
+```
+
+The dockerfile then copies the necessary files to the app working directory. The __app.py__ is a basic Flask App for serving our model pipeline.
+
+```python
 
 ```
 
