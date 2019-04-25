@@ -34,14 +34,64 @@ pipeline.fit(iris.data, iris.target)
 # Export the classifier to a file
 joblib.dump(pipeline, 'model.joblib')
 ```
+
 ## Deploy the model with Docker and Flask
 
 In order to run Docker containers, you need the Docker daemon installed. Once it's installed, we need a directory with the following files:
 1. Dockerfile
-2. __init__.py
+2. __ init __.py
 3. app.py
 4. requirements.txt
 5. model.joblib
+
+### Tests flask server works
+
+Before deploying our flask server in a Docker container, we will check to make sure it's working as expected. In a terminal we can run the server by running the following command:
+```powershell
+python app.py
+```
+The output should look similar to:
+```powershell
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+```
+
+Open up another terminal and test the server works by running:
+```powershell
+curl -v -H "Content-Type: application/json" -d '{"X":"3,3,3,3"}' http://127.0.0.1:5000/predict
+```
+
+The result of the POST request will be:
+```powershell
+*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to 127.0.0.1 (127.0.0.1) port 5000 (#0)
+> POST /predict HTTP/1.1
+> Host: 127.0.0.1:5000
+> User-Agent: curl/7.52.1
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 15
+> 
+* upload completely sent off: 15 out of 15 bytes
+* HTTP 1.0, assume close after body
+< HTTP/1.0 200 OK
+< Content-Type: application/json
+< Content-Length: 29
+< Server: Werkzeug/0.14.1 Python/3.6.7
+< Date: Thu, 25 Apr 2019 04:55:30 GMT
+< 
+{
+  "classes": [
+    2
+  ]
+}
+
+```
 
 ## Setup the Dockerfile
 
@@ -55,7 +105,7 @@ WORKDIR /app/
 COPY requirements.txt /app/
 RUN pip install -r ./requirements.txt
  
-COPY app.py __init__.py /app/
+COPY app.py __ init__.py /app/
 COPY model.joblib /app/
  
 EXPOSE 5000
@@ -73,9 +123,39 @@ scikit_learn==0.20.1
 The dockerfile then copies the necessary files to the app working directory. The __app.py__ is a basic Flask App for serving our model pipeline.
 
 ```python
+from flask import Flask
+from flask import request
+from flask import jsonify
+from sklearn.externals import joblib
+ 
+app = Flask(__name__)
 
+model = 'model.joblib'
+loaded_model = joblib.load(model)
+ 
+@app.route('/predict', methods=['GET','POST'])
+def predict():
+    data = request.get_json()
+    X = data['X']
+    X = np.array(list(map(float,X.split(',')))) #str to float
+    preds = loaded_model.predict(X.reshape(1,-1))
+    return jsonify({'classes': preds.tolist()})
+  
+if __name__ == '__main__':
+    app.run(port=5000,host='0.0.0.0')
 ```
 
+Now we can build the container with:
 
+```python
+docker build . -t docker_flask:v1
+```
+
+The -t flag indicates the name:version of our newly created docker image and . indicates that the Dockerfile is in the current directory.
+
+After it has finished building, you can run it with:
+```python
+
+```
 **Full code**: [Github](https://github.com/hacheemaster/DeployMLRestAPIDocker)
 
