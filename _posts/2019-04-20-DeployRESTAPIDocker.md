@@ -44,7 +44,33 @@ In order to run Docker containers, you need the Docker daemon installed. Once it
 4. requirements.txt
 5. model.joblib
 
-### Tests flask server works
+The __app.py__ is a basic Flask App for serving our model pipeline.
+
+```python
+import numpy as np
+from flask import Flask
+from flask import request
+from flask import jsonify
+from sklearn.externals import joblib
+ 
+app = Flask(__name__)
+
+model = 'model.joblib'
+loaded_model = joblib.load(model)
+ 
+@app.route('/predict', methods=['GET','POST'])
+def predict():
+    data = request.get_json()
+    X = data['X']
+    X = np.array(list(map(float,X.split(',')))) #str to float
+    preds = loaded_model.predict(X.reshape(1,-1))
+    return jsonify({'classes': preds.tolist()})
+  
+if __name__ == '__main__':
+    app.run(port=5000,host='0.0.0.0')
+```
+
+### Test flask server works
 
 Before deploying our flask server in a Docker container, we will check to make sure it's working as expected. In a terminal we can run the server by running the following command:
 ```powershell
@@ -90,7 +116,6 @@ The result of the POST request will be:
     2
   ]
 }
-
 ```
 
 ## Setup the Dockerfile
@@ -118,34 +143,10 @@ After installing the necessary dependencies for python, the file installs everyt
 ```python
 Flask==1.0.2
 scikit_learn==0.20.1
+numpy=1.15.4
 ```
 
-The dockerfile then copies the necessary files to the app working directory. The __app.py__ is a basic Flask App for serving our model pipeline.
-
-```python
-from flask import Flask
-from flask import request
-from flask import jsonify
-from sklearn.externals import joblib
- 
-app = Flask(__name__)
-
-model = 'model.joblib'
-loaded_model = joblib.load(model)
- 
-@app.route('/predict', methods=['GET','POST'])
-def predict():
-    data = request.get_json()
-    X = data['X']
-    X = np.array(list(map(float,X.split(',')))) #str to float
-    preds = loaded_model.predict(X.reshape(1,-1))
-    return jsonify({'classes': preds.tolist()})
-  
-if __name__ == '__main__':
-    app.run(port=5000,host='0.0.0.0')
-```
-
-Now we can build the container with:
+The dockerfile then copies the necessary files to the app working directory. Now we can build the container with:
 
 ```python
 docker build . -t docker_flask:v1
