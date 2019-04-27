@@ -7,11 +7,11 @@ tags: [Deploy, Machine Learning, Docker, REST API]
 excerpt: "Deploy, Docker, REST API"
 ---
 
-Let's use the famous iris dataset to build a classifier that we can serve as an API via a Docker container. The sklearn pipeline for preprocessing as well as predicting is saved as a joblib file. 
+Let's use the famous iris flower dataset to build a classifier that we can serve as an API via a Docker container. Recall that the iris dataset consists of input variables sepal length, sepal width, petal length, and petal width. The goal is to use these four numeric variables to predict the class of the flower (Iris setosa, Iris virginica, and Iris versicolor). 
 
 ## Train and export prediction pipeline
 
-To efficiently retrain the model, let's create a file named __model.py__
+The sklearn pipeline for preprocessing as well as predicting is saved as a joblib file. To efficiently retrain the model, let's create a file named __model.py__
 
 ```python
 from sklearn.externals import joblib
@@ -158,7 +158,7 @@ The -t flag indicates the name:version of our newly created docker image and . i
 
 After it has finished building, you can run it with:
 ```python
-sudo docker run --name test-api -p 5000:5000 -d docker_flask:v1
+docker run --name test-api -p 5000:5000 -d docker_flask:v1
 ```
 
 We have mapped port 500 from the Docker container to port 5000 on our host machine (localhost). Check that the container is running using:

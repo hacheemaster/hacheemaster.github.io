@@ -42,3 +42,5 @@ Since we have timestamped data, we could theoretically run a hypothesis test con
 
 The z-score gives the normalized deviation from the mean, and we can see that our z-score of -1.31 is less than the critical value of 1.645  for right-tailed 95% confidence. The p-value indicates, under the null hypothesis where we assumed a 0 difference, there's a 90.5% chance of observing a difference this large or larger. Since it's highly likely to observe this difference (i.e., it is well above our 5% threshold), we cannot reject the null hypothesis that there is no difference in conversion rates between the old and new pages. Therefore, the test should be ended to conserve resources. We can move forward by A/B testing other features on our page (Call-To-Action Button, CTA Text, Media, Placement) to see where we can get a lift.
 
+
+**Full code**: [Github](https://github.com/hacheemaster/AB_Testing)
