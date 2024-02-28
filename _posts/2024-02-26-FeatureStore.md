@@ -7,7 +7,6 @@ tags: [Feature Store, Feature Service, ML Platform, Python, API]
 excerpt: "Feature Store, Python, ML Platform"
 ---
 
-
 In the fast-paced world of machine learning and data science, the concept of a Feature Store has rapidly gained traction. A Feature Store acts as a centralized repository for storing, managing, and serving features (i.e., processed data that models are trained on) to machine learning models in production. This post will guide you through building a Feature Store as a service using Python, covering both offline and online use cases. Our goal is to create a system that not only stores features but also serves them in a reliable and scalable manner, catering to the diverse needs of Data Scientists.
 
 ## What is a Feature Store?
