@@ -1,5 +1,5 @@
 ---
-title: "Deploy a Containerized Machine Learning Model as a REST API with Docker"
+title: "Serving a Machine Learning Model via a Dockerized REST API"
 date: 2019-04-20
 tags: [Deploy, Machine Learning, Docker, REST API]
 #header:
