@@ -2,6 +2,7 @@
 title: "Feature Platform - Feature Store as a Service"
 date: 2024-02-26
 redirect_from:
+  - /FeatureStore/
   - /featurestore/
 tags: [Feature Store, Feature Service, ML Platform, Python, API]
 categories:

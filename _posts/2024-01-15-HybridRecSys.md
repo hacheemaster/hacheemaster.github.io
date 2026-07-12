@@ -2,6 +2,7 @@
 title: "Building a Hybrid Recommendation Engine using Python"
 date: 2024-01-15
 redirect_from:
+  - /HybridRecSys/
   - /hybridrecsys/
 tags: [Recommendation System, Machine Learning, Python, Content-based filtering, Matrix Factorization]
 categories:

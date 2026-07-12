@@ -2,6 +2,7 @@
 title: "E-commerce Website Customer Conversion Funnel Analysis"
 date: 2019-03-02
 redirect_from:
+  - /ECommerceConversionFunnel/
   - /ecommerceconversionfunnel/
 tags: [Conversion Funnel, Visualization, Python]
 categories:
