@@ -1,6 +1,8 @@
 ---
 title: "Deploy DoctorGPT Gen AI app in under 5 mins on Google Cloud"
 date: 2023-12-08
+redirect_from:
+  - /doctorgpt/
 tags: [LLM, Gen AI, Machine Learning, Langchain, REST API]
 categories:
   - Gen AI

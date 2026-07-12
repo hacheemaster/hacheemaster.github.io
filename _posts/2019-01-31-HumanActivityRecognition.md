@@ -1,6 +1,8 @@
 ---
 title: "Human Action Recognition in Time Series data using Deep Learning"
 date: 2019-01-31
+redirect_from:
+  - /humanactivityrecognition/
 tags: [Deep Learning, Time Series, action recognition]
 categories:
   - Deep Learning
