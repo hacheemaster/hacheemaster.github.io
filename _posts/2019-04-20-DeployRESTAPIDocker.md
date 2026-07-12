@@ -1,6 +1,8 @@
 ---
 title: "Deploy a Containerized Machine Learning Model as a REST API with Docker"
 date: 2019-04-20
+redirect_from:
+  - /deployrestapidocker/
 tags: [Deploy, Machine Learning, Docker, REST API]
 categories:
   - MLOps

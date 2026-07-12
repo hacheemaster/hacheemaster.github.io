@@ -1,6 +1,8 @@
 ---
 title: "A checklist for ML Production Systems"
 date: 2019-04-25
+redirect_from:
+  - /rubricproductionml/
 tags: [Machine Learning, Production, Model Monitoring]
 categories:
   - MLOps

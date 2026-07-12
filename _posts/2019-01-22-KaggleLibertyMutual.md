@@ -1,6 +1,8 @@
 ---
 title: "Hazard Count Prediction for Liberty Mutual's Properties"
 date: 2019-01-22
+redirect_from:
+  - /kagglelibertymutual/
 tags: [kaggle, random forest, xgboost]
 categories:
   - Machine Learning
