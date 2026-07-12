@@ -2,6 +2,7 @@
 title: "Churn Prediction for KKBox"
 date: 2019-02-19
 redirect_from:
+  - /KKBoxChurn/
   - /kkboxchurn/
 tags: [kaggle, churn, logistic regression]
 categories:

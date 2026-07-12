@@ -2,6 +2,7 @@
 title: "AB Testing Landing Page"
 date: 2019-04-17
 redirect_from:
+  - /ABTesting/
   - /abtesting/
 tags: [AB Testing, Conversion Rate]
 categories:
