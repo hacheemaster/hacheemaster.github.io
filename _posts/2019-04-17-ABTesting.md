@@ -2,9 +2,11 @@
 title: "AB Testing Landing Page"
 date: 2019-04-17
 tags: [AB Testing, Conversion Rate]
+categories:
+  - Analytics
 #header:
 #  image: "/assets/images/activityrecognition.gif"
-excerpt: "AB Testing, Conversion Rate"
+excerpt: "Analyzing a landing-page A/B test end to end; a two-proportion z-test shows no significant lift, so the disciplined call is to stop and test elsewhere."
 ---
 
 # Agenda 
@@ -16,7 +18,7 @@ excerpt: "AB Testing, Conversion Rate"
 
 # Problem Statement
 
-We have data about an A/B test that an e-commerce website conducted. There are two versions of the landing page that they tested. The goal is to help the company understand if they should implement the new page, keep the old page, or perhaps run the experiment longer to make their decision.
+An e-commerce company has run an A/B test on two versions of its landing page and now has to make a call: ship the new page, keep the old one, or let the experiment run longer. The value here lies less in the winner than in the discipline, fixing the hypotheses, error rates, and required sample size up front so the decision rests on evidence rather than a glance at the numbers.
 
 * Null Hypothesis:  ConversionNew - ConversionOld = 0
 * Alternative Hypothesis: ConversionNew - ConversionOld > 0

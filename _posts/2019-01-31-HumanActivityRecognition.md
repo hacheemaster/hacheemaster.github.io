@@ -2,9 +2,11 @@
 title: "Human Action Recognition in Time Series data using Deep Learning"
 date: 2019-01-31
 tags: [Deep Learning, Time Series, action recognition]
+categories:
+  - Deep Learning
 header:
   image: "/assets/images/activityrecognition.gif"
-excerpt: "Deep Learning, Time Series, Human Action Recognition, Smartphones"
+excerpt: "Classifying six human activities from raw smartphone sensor data with LSTMs and 1D CNNs, and why 1D CNNs win on runtime for production."
 ---
 
 # Agenda 
@@ -19,7 +21,7 @@ excerpt: "Deep Learning, Time Series, Human Action Recognition, Smartphones"
 
 # Problem Statement
 
-Human Action Recogntion aims to determine human activities given monitoring data from systems such as body sensors or videos. The process usually involves noise filtering the data and extracting pre-defined time series features. The problem with this approach is it requires domain expertise.
+Human action recognition aims to infer what a person is doing from monitoring data such as body sensors or video, and the classical pipeline leans heavily on noise filtering and hand-engineered time series features. That dependence on domain expertise is exactly what makes the problem worth revisiting: if a neural network can learn the right features directly from raw signals, we remove a brittle, expert-driven step from the pipeline.
 
 An alternative approach would be to use neural network architectures that can serve as feature extractors, thus eliminating the need for feature engineering. In this tutorial, you will learn LSTMs and how they stack up against 1-D CNNs.
 

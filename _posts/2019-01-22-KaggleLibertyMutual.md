@@ -2,16 +2,18 @@
 title: "Hazard Count Prediction for Liberty Mutual's Properties"
 date: 2019-01-22
 tags: [kaggle, random forest, xgboost]
+categories:
+  - Machine Learning
 header:
   image: "/assets/images/propertyinspection.jpg"
-excerpt: "Kaggle, Insurance, Data Science"
+excerpt: "A top-12% Kaggle finish predicting property hazard counts for Liberty Mutual, where ensembling and disciplined cross-validation beat feature engineering."
 ---
 
 **Kaggle Ranking**: Top 12% (248/2,362 competitors)	
 
 **End Date**: August 28, 2015
 
-**Description**: Predict hazard counts for a house given anonymized variables such as roof, foundation, windows, and sliding. The goal is to help Liberty Mutual determine whether they should insure the property. Therefore, aligning Liberty Mutual’s portfolio of home insurance policies with their business goals.
+**Description**: Liberty Mutual needs to decide which homes are worth insuring, and this competition frames that underwriting decision as a supervised learning problem: predict the hazard count for a property from anonymized attributes such as its roof, foundation, windows, and siding. Getting these predictions right lets the insurer align its portfolio of home policies with its business goals.
 
 **Best Method**: Weighted Ensemble (RF + XGBoost)
 

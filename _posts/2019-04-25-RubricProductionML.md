@@ -2,12 +2,14 @@
 title: "A checklist for ML Production Systems"
 date: 2019-04-25
 tags: [Machine Learning, Production, Model Monitoring]
+categories:
+  - MLOps
 #header:
 #  image: "/assets/images/activityrecognition.gif"
-excerpt: "Model Monitoring, Production"
+excerpt: "Distilling Google's 'ML Test Score' rubric into a reusable CSV checklist that scores Data, Model, Infrastructure, and Monitoring readiness before deployment."
 ---
 
-This article summarizes the production pipeline scoring rubric provided by Google Inc. in ["What's your ML Test Score? A rubric for ML production systems"](https://ai.google/research/pubs/pub45742) and places it in a csv file. It can easily be used across projects to make sure they meet the minimum deployment threshold.
+Shipping a model is not the same as shipping a reliable production system, and the gap between the two is easy to underestimate. This article distills the production pipeline scoring rubric from Google's ["What's your ML Test Score? A rubric for ML production systems"](https://ai.google/research/pubs/pub45742) into a reusable CSV checklist, so any project can be scored against a minimum deployment threshold before it goes live.
 
 Machine Learners at Google specify four categories to test: Data, Model, Infrastructure, and Monitoring. 
 

@@ -2,12 +2,14 @@
 title: "Deploy a Containerized Machine Learning Model as a REST API with Docker"
 date: 2019-04-20
 tags: [Deploy, Machine Learning, Docker, REST API]
+categories:
+  - MLOps
 #header:
 #  image: "/assets/images/activityrecognition.gif"
-excerpt: "Deploy, Docker, REST API"
+excerpt: "A step-by-step guide to packaging a scikit-learn iris classifier as a Flask REST API and deploying it inside a Docker container."
 ---
 
-Let's use the famous iris flower dataset to build a classifier that we can serve as an API via a Docker container. Recall that the iris dataset consists of input variables sepal length, sepal width, petal length, and petal width. The goal is to use these four numeric variables to predict the class of the flower (Iris setosa, Iris virginica, and Iris versicolor). 
+Training a model is only half the job; getting it behind a stable, reproducible endpoint is what makes it useful to anyone else. This walkthrough uses the classic iris flower dataset, four numeric measurements (sepal length, sepal width, petal length, and petal width) that predict one of three species (Iris setosa, Iris virginica, and Iris versicolor), as a compact example for packaging a scikit-learn classifier as a REST API and shipping it inside a Docker container. 
 
 ## Train and export prediction pipeline
 
