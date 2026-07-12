@@ -2,9 +2,11 @@
 title: "E-commerce Website Customer Conversion Funnel Analysis"
 date: 2019-03-02
 tags: [Conversion Funnel, Visualization, Python]
+categories:
+  - Analytics
 #header:
 #  image: "/assets/images/activityrecognition.gif"
-excerpt: "Conversion Funnel, Visualization, Plotly"
+excerpt: "A funnel analysis of a four-page e-commerce site that traces a sharp March 1st drop, isolating a 75% collapse in mobile home-to-search conversion."
 ---
 
 # Agenda 
@@ -19,7 +21,7 @@ excerpt: "Conversion Funnel, Visualization, Plotly"
 
 # Problem Statement
 
-We are working with data from an e-commerce website. The site is straightforward and has just 4 pages. The first page is the home page. When you come to the site for the first time, you can land on the home page. From the home page, the user can perform a search and land on the search page. From the search page, if the user clicks on a product, she gets to the payment page, where she is asked to provide payment information to buy that product. If she does decide to buy, she ends up on the confirmation page.
+This analysis walks the conversion funnel of a deliberately simple e-commerce site with just four pages: visitors land on the home page, run a search to reach the search page, click a product to reach the payment page, and, if they decide to buy, arrive at the confirmation page. Framing the journey this explicitly is what later lets us pinpoint exactly where users drop off.
 
 The company CEO isn't thrilled with the volume of sales and, especially, of sales coming from new users. Our goal is to investigate whether there is something wrong in the conversion funnel or, in general, if we can suggest how the conversion rate can be improved.
 

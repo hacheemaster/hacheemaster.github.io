@@ -2,12 +2,15 @@
 title: "Deploy DoctorGPT Gen AI app in under 5 mins on Google Cloud"
 date: 2023-12-08
 tags: [LLM, Gen AI, Machine Learning, Langchain, REST API]
+categories:
+  - Gen AI
+  - MLOps
 #header:
 #  image: "/assets/images/activityrecognition.gif"
-excerpt: "LLM, LangChain, REST API"
+excerpt: "Deploying a LangChain-powered doctor's assistant on Google Cloud Run in minutes, serving differential diagnoses and ICD10/CPT codes via a REST API."
 ---
 
-The [original article](https://cloud.google.com/blog/products/ai-machine-learning/deploy-langchain-on-cloud-run-with-langserve/) on Google Cloud is co-authored by the Founding Engineer of LangChain, a very popular framework that makes it seamless to build apps with large language models (LLMs). In this post we will explore the quickest way to deploy a doctor’s assistant that can answer questions about possible differential diagnoses, ICD10 and CPT codes that a doctor might need to consider given the patient is coming in with a particular set of chief complaints.
+Standing up a production-ready generative AI service has gotten remarkably fast on managed cloud infrastructure, and this post shows just how fast. Building on the [original article](https://cloud.google.com/blog/products/ai-machine-learning/deploy-langchain-on-cloud-run-with-langserve/) from Google Cloud, co-authored by a founding engineer of LangChain, we walk through the quickest path to deploy a doctor's assistant that answers questions about possible differential diagnoses, ICD10, and CPT codes a physician might weigh given a patient's particular set of chief complaints.
 
 ## Model
 

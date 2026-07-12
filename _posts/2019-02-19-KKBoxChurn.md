@@ -2,9 +2,11 @@
 title: "Churn Prediction for KKBox"
 date: 2019-02-19
 tags: [kaggle, churn, logistic regression]
+categories:
+  - Machine Learning
 header:
   image: "/assets/images/churn.jpeg"
-excerpt: "Kaggle, Churn, Logistic Regression"
+excerpt: "Predicting subscriber churn for KKBox's music service, comparing five classifiers and landing on interpretable logistic regression with model monitoring."
 ---
 
 # Agenda 
@@ -24,7 +26,7 @@ excerpt: "Kaggle, Churn, Logistic Regression"
 
 # Problem Statement
 
-KKBox offers a subscription-based music streaming service. Customers can either auto-renew or choose to renew each month manually. Users can also cancel their membership at any time. Therefore, the definition of churn is a bit tricky. The competition hosts chose to define a member as having churned if there is no new valid subscription 30 days after the current membership expires, even if the user decides to cancel.
+KKBox runs a subscription music streaming service where members can auto-renew, renew manually each month, or cancel at any time, which makes churn surprisingly hard to pin down. The competition settles on a precise definition: a member has churned if there is no new valid subscription 30 days after the current membership expires, even if the user decides to cancel. Getting that definition right is the foundation for everything downstream, from exploratory analysis to the model itself.
 
 The goal is to perform some exploratory analysis to see what insights we can find about churning customers and build a model to predict the likelihood a given customer will churn. 
 
